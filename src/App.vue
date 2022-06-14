@@ -8,7 +8,7 @@
   <div class="blue">
     <router-view/>
   </div>
-  <div>
+  <div class="red">
     <router-view name = "sub"/>
   </div>
 </template>
@@ -35,5 +35,8 @@ export default {
 }
 .blue{
   border: solid 2px blue;
+}
+.red{
+  border: solid 2px red;
 }
 </style>
