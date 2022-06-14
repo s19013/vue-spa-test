@@ -28,6 +28,16 @@ const routes = [
     })
   },
   {
+    path: '/book/:id',
+    name: 'book',
+    component: () => import('@/components/bookDetail.vue'),
+    props: route => ({
+      id     : Number(route.params.id),
+      title  : route.params.title,
+      content: route.params.content,
+    })
+  },
+  {
     path: '/:catchAll(.*)',//上記に書いてあるパス以外すべてが対象(正規表現?)
     redirect:'/'
   }
