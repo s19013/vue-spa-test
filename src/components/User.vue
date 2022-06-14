@@ -17,11 +17,6 @@ export default {
         
     }
   },
-  props: {
-    id     :Number,
-    title  :String,
-    content:String
-  },
   methods: {
     
   },
