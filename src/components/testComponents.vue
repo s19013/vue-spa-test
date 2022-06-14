@@ -1,8 +1,5 @@
 <template>
   <div class="hello">
-    <!-- <router-link to="/">home</router-link>|
-    <router-link to="/second" >second</router-link>|
-    <router-link to="/book">booklist</router-link> -->
     <h1>{{ msg }}</h1>
     <button @click="checkRouteInfo">ルート情報</button>
     <button @click="goToHome"></button>
