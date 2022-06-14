@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+import HomeSub from '@/components/HomeSub.vue'
 import User from '@/components/User.vue'
 import UserProfile from '@/components/UserProfile.vue'
 import UserPost from '@/components/UserPost.vue'
@@ -8,7 +9,10 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HelloWorld
+    components: {
+      default:HelloWorld,
+      sub:HomeSub
+    }
   },
   {
     path: '/second',
