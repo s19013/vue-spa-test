@@ -3,26 +3,31 @@
     <!-- <router-link to="/">home</router-link>|
     <router-link to="/second" >second</router-link>|
     <router-link to="/book">booklist</router-link> -->
-    <h1>{{ msg }}</h1>
-    <button @click="checkRouteInfo">ルート情報</button>
-    <button @click="goToHome"></button>
+
+    <p>詳細</p>
+    <p>title  :{{title}}</p>
+    <p>content:{{content}}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'bookDetail',
+  data() {
+    return {
+        
+    }
+  },
   props: {
-    msg: String
+    id     :Number,
+    title  :String,
+    content:String
   },
   methods: {
-    checkRouteInfo(){
-      console.log(this.$route);
-      console.log(this.$route.path);
-    },
-    goToHome(){
-      this.$router.push('/')
-    }
+    
+  },
+  created() {
+    if(this.$route.params.id > 4){ this.$router.push('/book') }
   },
 }
 </script>
