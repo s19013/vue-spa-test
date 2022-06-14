@@ -1,7 +1,11 @@
 <template>
   <div>
     <p>ユーザー情報</p>
-    <router-view/>
+    <router-link to="profile">プロフィール</router-link>|
+    <router-link to="post">記事</router-link>
+    <div class="green">
+        <router-view/>
+    </div>
   </div>
 </template>
 
@@ -42,5 +46,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.green{
+    border:#42b983 solid 2px
 }
 </style>
