@@ -1,13 +1,12 @@
 <template>
   <div>
-    <p>ユーザー情報</p>
-    <router-view/>
+    <p>プロフィール</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'bookDetail',
+  name: 'userProfile',
   data() {
     return {
         

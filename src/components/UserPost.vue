@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>ユーザー情報</p>
-    <router-view/>
+    <p>ポスト</p>
   </div>
 </template>
 
