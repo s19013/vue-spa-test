@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorld from '@/components/HelloWorld.vue'
+import User from '@/components/User.vue'
+import UserProfile from '@/components/UserProfile.vue'
+import UserPost from '@/components/UserPost.vue'
 
 const routes = [
   {
@@ -28,14 +31,19 @@ const routes = [
     })
   },
   {
-    path: '/book/:id',
-    name: 'book',
-    component: () => import('@/components/bookDetail.vue'),
-    props: route => ({
-      id     : Number(route.params.id),
-      title  : route.params.title,
-      content: route.params.content,
-    })
+    path: '/user',
+    component: User,
+    children:[
+      {
+        path:'profile',
+        component:UserProfile
+      },
+      {
+        path:'post',
+        component:UserPost
+      },
+    ]
+
   },
   {
     path: '/:catchAll(.*)',//上記に書いてあるパス以外すべてが対象(正規表現?)
