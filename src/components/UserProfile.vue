@@ -12,16 +12,8 @@ export default {
         
     }
   },
-  props: {
-    id     :Number,
-    title  :String,
-    content:String
-  },
   methods: {
     
-  },
-  created() {
-    if(this.$route.params.id > 4){ this.$router.push('/book') }
   },
 }
 </script>
