@@ -8,6 +8,9 @@
   <div class="blue">
     <router-view/>
   </div>
+  <div>
+    <router-view name = "sub"/>
+  </div>
 </template>
 
 <script>
